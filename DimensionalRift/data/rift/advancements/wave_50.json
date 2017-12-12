@@ -1,0 +1,18 @@
+{
+	"display": {
+		"title": "§9Still here, huh?",
+		"description": "§3Congrants on passing wave 50; don't you have something better to do?",
+		"icon": {
+            "item": "minecraft:clock"
+        },
+		"frame": "challenge"
+    },
+    "criteria": {
+        "pass_wave_50": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+	"frame": "challenge",
+	"parent": "rift:wave_20",
+	"hidden":true
+}
