@@ -62,6 +62,6 @@ execute if entity @s[scores={rift_power=18..}] run summon armor_stand ~ ~1 ~ {Ta
 execute if entity @s[scores={rift_power=19..}] run tellraw @a[distance=..64] ["",{"text":"Wither Boss: Puny humans!","color":"red"},{"text":"\nA wither boss has forced its way through the ","color":"dark_red"},{"text":"rift!","color":"light_purple"}]
 execute if entity @s[scores={rift_power=19..}] run summon wither ~ ~1 ~ {CustomName:"Wither Boss",CustomNameVisible:1,Tags:["nexus_mob","nexus_mob_spawn"],Invul:300,Attributes:[{Name:generic.maxHealth,Base:600},{Name:generic.followRange,Base:64}],Glowing:1b,Team:"attackers"}
 
-execute as @e[tag=nexus_mob_spawn] run spreadplayers ~ ~ 0.5 64 false @s
+execute as @e[tag=nexus_mob_spawn] run spreadplayers ~ ~ 0.001 64 false @s
 execute as @e[type=armor_stand,tag=nexus_mob_group] at @s run function rift:mob_spawning
 execute as @e[tag=nexus_mob_target] at @s run summon snowball ~ ~4 ~ {ownerName:"00000000-0000-0001-0000-000000000001",Motion:[0.0,-1.0]}

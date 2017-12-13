@@ -19,8 +19,10 @@ scoreboard players operation health_1 rift_data = health_0 rift_data
 execute if score health_0 rift_data < con_50 rift_data if score notif_timer rift_data < con_300 rift_data run function rift:nexus_death
 
 #Upgrade Effects
-execute if entity @s[tag=nexus_slow_aura] run effect give @e[tag=nexus_mob,distance=..16] minecraft:slowness 2 0
-execute if entity @s[tag=nexus_wither_aura] run effect give @e[tag=nexus_mob,distance=..16] minecraft:wither 2 0
+scoreboard players operation temp_0 rift_data = @s rift_time
+scoreboard players operation temp_0 rift_data %= con_50 rift_data
+execute if score temp_0 rift_data = con_0 rift_data if entity @s[tag=nexus_slow_aura] run effect give @e[tag=nexus_mob,distance=..16] minecraft:slowness 3 0
+execute if score temp_0 rift_data = con_0 rift_data if entity @s[tag=nexus_wither_aura] run effect give @e[tag=nexus_mob,distance=..12] minecraft:wither 3 0
 
 #Upgrade Triggers
 execute as @a[scores={rift_trade=1..}] at @s run function rift:nexus_trade

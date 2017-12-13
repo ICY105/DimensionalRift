@@ -44,6 +44,6 @@ execute if entity @s[scores={rift_power=18..}] run summon armor_stand ~ ~1 ~ {Ta
 execute if entity @s[scores={rift_power=19..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_evoker"],NoGravity:1b,Invisible:1,Invulnerable:1}
 execute if entity @s[scores={rift_power=19..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_bear"],NoGravity:1b,Invisible:1,Invulnerable:1}
 
-execute as @e[type=armor_stand,tag=nexus_mob_spawn] run spreadplayers ~ ~ 0.5 64 false @s
+execute as @e[type=armor_stand,tag=nexus_mob_spawn] run spreadplayers ~ ~ 0.001 64 false @s
 execute as @e[type=armor_stand,tag=nexus_mob_spawn] at @s run function rift:mob_spawning
 execute as @e[tag=nexusMobTarget] at @s run summon snowball ~ ~4 ~ {ownerName:"00000000-0000-0001-0000-000000000001",Motion:[0.0,-1.0]}
