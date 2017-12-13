@@ -3,6 +3,8 @@ Think you've got the strongest base? Tons of traps, thick walls, and plenty of a
 
 Want to know more? Check out the [wiki](https://github.com/ImCoolYeah105/DimensionalRift/wiki).
 
+<img src="https://i.imgur.com/HbNlk1v.png">
+
 # Download
 
 Warning: This datapack includes custom mobs that will grief your base! Do not use in a world you care about without a backup.
