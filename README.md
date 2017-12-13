@@ -1,7 +1,7 @@
 # Dimensional Rift
 Think you've got the strongest base? Tons of traps, thick walls, and plenty of armor? Open the Dimensional Rift and find out just how long you can last! Dimensional Rift is a custom PVE "Defend the Nexus" gamemode. Featuring custom mobs, AI, and some nice rewards, if you can survive.
 
-Want to know more? Check out the ![wiki](https://github.com/ImCoolYeah105/DimensionalRift/wiki).
+Want to know more? Check out the [wiki](https://github.com/ImCoolYeah105/DimensionalRift/wiki).
 
 # Download
 
