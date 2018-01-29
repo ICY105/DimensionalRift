@@ -1,9 +1,9 @@
 {
 	"display": {
-		"title": "§4Evoker Boss",
-		"description": "§3Successfully pass wave 10, defeating the Evoker Boss.",
+		"title": "Witch Boss",
+		"description": "§3Successfully pass wave 10, defeating the Witch Boss.",
 		"icon": {
-            "item": "minecraft:totem_of_undying"
+            "item": "minecraft:potion"
         }
     },
     "criteria": {
@@ -11,5 +11,5 @@
             "trigger": "minecraft:impossible"
         }
     },
-	"parent": "rift:rift"
+	"parent": "rift:wave_5"
 }

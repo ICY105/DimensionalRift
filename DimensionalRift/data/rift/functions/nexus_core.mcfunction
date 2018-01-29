@@ -2,11 +2,15 @@
 scoreboard players add @s rift_time 1
 
 execute if entity @s[scores={rift_time=1}] run tellraw @a[distance=..96] ["",{"text":"30 seconds until a new wave a mobs begins.","color":"dark_red"}]
-execute if entity @s[scores={rift_time=1}] run time set 16000
+execute if entity @s[scores={rift_time=1}] run time set 13000
 
-execute if entity @s[scores={rift_time=600}] run function rift:spawn_wave_one
-execute if entity @s[scores={rift_time=3600}] run function rift:spawn_wave_two
-execute if entity @s[scores={rift_time=5999}] run function rift:next_wave
+execute if entity @s[scores={rift_time=600}] run function rift:mobs/spawn_wave
+execute if entity @s[scores={rift_power=0..4,rift_time=4000..}] run function rift:next_wave
+execute if entity @s[scores={rift_power=4..9,rift_time=4400..}] run function rift:next_wave
+execute if entity @s[scores={rift_power=10..14,rift_time=4800..}] run function rift:next_wave
+execute if entity @s[scores={rift_power=15..19,rift_time=5200..}] run function rift:next_wave
+execute if entity @s[scores={rift_power=20..,rift_time=5600..}] run function rift:next_wave
+execute if entity @s[scores={rift_power=20..,rift_time=6000..}] run function rift:next_wave
 
 #Taking Damage Nofication
 execute store result score health_0 rift_data run data get entity @s Health
@@ -14,6 +18,16 @@ execute if score health_0 rift_data < health_1 rift_data if score notif_timer ri
 execute if score health_0 rift_data < health_1 rift_data if score notif_timer rift_data = con_0 rift_data run scoreboard players set notif_timer rift_data 300
 execute if score notif_timer rift_data > con_0 rift_data run scoreboard players remove notif_timer rift_data 1
 scoreboard players operation health_1 rift_data = health_0 rift_data
+
+#Health Display
+execute if score health_0 rift_data >= con_50 rift_data run data merge entity @s {CustomName:"[{\"text\":\"\"},{\"text\":\"█\",\"color\":\"dark_green\",\"italic\":false},{\"text\":\"███████\",\"color\":\"dark_red\",\"italic\":false}]"}
+execute if score health_0 rift_data >= con_100 rift_data run data merge entity @s {CustomName:"[{\"text\":\"\"},{\"text\":\"██\",\"color\":\"dark_green\",\"italic\":false},{\"text\":\"██████\",\"color\":\"dark_red\",\"italic\":false}]"}
+execute if score health_0 rift_data >= con_150 rift_data run data merge entity @s {CustomName:"[{\"text\":\"\"},{\"text\":\"███\",\"color\":\"dark_green\",\"italic\":false},{\"text\":\"█████\",\"color\":\"dark_red\",\"italic\":false}]"}
+execute if score health_0 rift_data >= con_200 rift_data run data merge entity @s {CustomName:"[{\"text\":\"\"},{\"text\":\"████\",\"color\":\"dark_green\",\"italic\":false},{\"text\":\"████\",\"color\":\"dark_red\",\"italic\":false}]"}
+execute if score health_0 rift_data >= con_250 rift_data run data merge entity @s {CustomName:"[{\"text\":\"\"},{\"text\":\"█████\",\"color\":\"dark_green\",\"italic\":false},{\"text\":\"███\",\"color\":\"dark_red\",\"italic\":false}]"}
+execute if score health_0 rift_data >= con_300 rift_data run data merge entity @s {CustomName:"[{\"text\":\"\"},{\"text\":\"██████\",\"color\":\"dark_green\",\"italic\":false},{\"text\":\"██\",\"color\":\"dark_red\",\"italic\":false}]"}
+execute if score health_0 rift_data >= con_350 rift_data run data merge entity @s {CustomName:"[{\"text\":\"\"},{\"text\":\"███████\",\"color\":\"dark_green\",\"italic\":false},{\"text\":\"█\",\"color\":\"dark_red\",\"italic\":false}]"}
+execute if score health_0 rift_data >= con_400 rift_data run data merge entity @s {CustomName:"[{\"text\":\"\"},{\"text\":\"████████\",\"color\":\"dark_green\",\"italic\":false}]"}
 
 #Dead Effect
 execute if score health_0 rift_data < con_50 rift_data if score notif_timer rift_data < con_300 rift_data run function rift:nexus_death
@@ -27,33 +41,8 @@ execute if score temp_0 rift_data = con_0 rift_data if entity @s[tag=nexus_withe
 #Upgrade Triggers
 execute as @a[scores={rift_trade=1..}] at @s run function rift:nexus_trade
 
-#Health Display
-execute if score health_0 rift_data >= con_50 rift_data run data merge entity @s {CustomName:"§4███████§2█"}
-execute if score health_0 rift_data >= con_100 rift_data run data merge entity @s {CustomName:"§4██████§2██"}
-execute if score health_0 rift_data >= con_150 rift_data run data merge entity @s {CustomName:"§4█████§2███"}
-execute if score health_0 rift_data >= con_200 rift_data run data merge entity @s {CustomName:"§4████§2████"}
-execute if score health_0 rift_data >= con_250 rift_data run data merge entity @s {CustomName:"§4███§2█████"}
-execute if score health_0 rift_data >= con_300 rift_data run data merge entity @s {CustomName:"§4██§2██████"}
-execute if score health_0 rift_data >= con_350 rift_data run data merge entity @s {CustomName:"§4█§2███████"}
-execute if score health_0 rift_data >= con_400 rift_data run data merge entity @s {CustomName:"§2████████"}
+#Skip to next wave
+execute if score temp_0 rift_data = con_0 rift_data if entity @s[scores={rift_time=900..}] unless entity @e[tag=nexus_mob,distance=..96] run function rift:next_wave
 
-#### Custom Mobs
-scoreboard players set @e[tag=nexus_still,nbt=!{Motion:[0.0,0.0,0.0]}] rift_power 0
-
-execute as @e[tag=nexus_builder] at @s run function rift:builder
-
-tag @e[tag=nexus_bomb] remove nexus_still
-tag @e[tag=nexus_bomb,nbt={Motion:[0.0,0.0,0.0]}] add nexus_still
-scoreboard players set @e[tag=nexus_bomb,tag=!nexus_still] rift_power 0
-execute as @e[tag=nexus_bomb,scores={rift_power=120..}] run data merge entity @s {Fuse:0}
-
-tag @e[tag=nexus_smash] remove nexus_still
-tag @e[tag=nexus_smash,nbt={Motion:[0.0,0.0,0.0]}] add nexus_still
-
-execute as @e[tag=nexus_smash,scores={rift_power=60}] at @s run fill ~-1 ~ ~-1 ~1 ~2 ~1 minecraft:air destroy
-
-scoreboard players add @e[tag=nexus_still] rift_power 1
-
-scoreboard players add @e[tag=nexus_witch_boss] rift_time 1
-execute as @e[tag=nexus_witch_boss,scores={rift_time=120..}] at @s run spreadplayers ~ ~ 0.5 8 false @s
-scoreboard players add @e[tag=nexus_witch_boss,scores={rift_time=120..}] rift_time 0
+# Custom Mobs
+execute as @e[tag=nexus_custom] at @s run function rift:mobs/custom_mob

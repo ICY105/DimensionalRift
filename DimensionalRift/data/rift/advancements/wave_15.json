@@ -1,9 +1,9 @@
 {
 	"display": {
-		"title": "§2Witch Boss",
-		"description": "§3Successfully pass wave 15, defeating the Witch Boss.",
+		"title": "§9Illusioner Boss",
+		"description": "§3Successfully pass wave 15, defeating the Illusioner Boss.",
 		"icon": {
-            "item": "minecraft:potion"
+            "item": "minecraft:bow"
         }
     },
     "criteria": {

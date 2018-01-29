@@ -1,11 +1,10 @@
 {
 	"display": {
-		"title": "§4Wither Boss",
-		"description": "§3Successfully pass wave 20, defeating the final Wither Boss.",
+		"title": "§6Magma Cube Boss",
+		"description": "§3Successfully pass wave 20, defeating the Magma Cube Boss.",
 		"icon": {
-            "item": "minecraft:wither_skeleton_skull"
-        },
-		"frame": "challenge"
+            "item": "minecraft:magma_cream"
+        }
     },
     "criteria": {
         "pass_wave_20": {

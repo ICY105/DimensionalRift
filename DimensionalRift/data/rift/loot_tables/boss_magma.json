@@ -1,0 +1,27 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:diamond",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 6,
+                                "max": 8
+                            }
+                        },
+						{
+                            "function": "minecraft:set_nbt",
+                            "tag": "{ench:[{lvl:1,id:71}],display:{Name:\"{\\\"text\\\":\\\"Unstable Matter\\\",\\\"color\\\":\\\"dark_purple\\\",\\\"italic\\\":false}\",Lore:[\"§3Generated from rifts.\"]}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

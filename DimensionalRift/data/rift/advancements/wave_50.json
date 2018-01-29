@@ -13,6 +13,6 @@
         }
     },
 	"frame": "challenge",
-	"parent": "rift:wave_20",
+	"parent": "rift:wave_25",
 	"hidden":true
 }
