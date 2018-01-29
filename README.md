@@ -19,7 +19,7 @@ For Datapack Format:
 1. Navigate to the main minecraft directory
 2. Go to saves, then go to the world you want to install Dimensional Rift for.
 3. Drop the downloaded zip file into the /datapacks folder
-4. Enter the world and run the command /function rift:start
+4. Enter the world and run the command /reload
 5. Enjoy :)
 
 For Function Script Format:
