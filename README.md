@@ -9,7 +9,7 @@ Want to know more? Check out the [wiki](https://github.com/ImCoolYeah105/Dimensi
 
 Warning: This datapack includes custom mobs that will grief your base! Do not use in a world you care about without a backup.
 
-Datapack v2.0.2 for MC 1.13: [Download](https://www.dropbox.com/s/s92uzzqaardv29k/DimensionalRift.zip?dl=1)
+Datapack v2.1.0 for MC 1.13: [Download](https://www.dropbox.com/s/hbo0vdg2d41u390/DimensionalRift.zip?dl=1)
 
 Function Script for MC 1.12: [Download](https://www.dropbox.com/s/zvs03fypd1bi3qm/invasion.zip?dl=1)
 
