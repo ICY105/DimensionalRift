@@ -12,7 +12,9 @@ execute if entity @s[scores={rift_power=3..}] run summon armor_stand ~ ~1 ~ {Tag
 execute if entity @s[scores={rift_power=3..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_spider"],NoGravity:1b,Invisible:1,Invulnerable:1}
 
 execute if entity @s[scores={rift_power=4}] run tellraw @a[distance=..64] ["",{"text":"A Killer Bunny Boss has forced its way through the rift!","color":"dark_red"}]
-execute if entity @s[scores={rift_power=4}] run summon rabbit ~ ~1 ~ {Tags:["nexus_mob_spawn","nexus_mob"],RabbitType:99,Attributes:[{Name:generic.maxHealth,Base:80},{Name:generic.movementSpeed,Base:0.4},{Name:generic.attackDamage,Base:40},{Name:generic.followRange,Base:64},{Name:generic.knockbackResistance,Base:1}],Health:100.0f,Glowing:1b,Team:"attackers",DeathLootTable:"rift:boss_bunny",ActiveEffects:[{Id:8,Amplifier:3,Duration:20000,ShowParticles:0b}]}
+execute if entity @s[scores={rift_power=4}] run summon rabbit ~ ~1 ~ {Tags:["nexus_mob_spawn","nexus_mob","nexus_bunny_boss"],RabbitType:99,Attributes:[{Name:generic.maxHealth,Base:80},{Name:generic.movementSpeed,Base:0.4},{Name:generic.attackDamage,Base:40},{Name:generic.followRange,Base:64},{Name:generic.knockbackResistance,Base:1}],Health:100.0f,Glowing:1b,Team:"attackers",DeathLootTable:"rift:boss_bunny",ActiveEffects:[{Id:8,Amplifier:3,Duration:20000,ShowParticles:0b}]}
+execute if entity @s[scores={rift_power=4}] run bossbar set rift:killer_bunny players @a[distance=..96]
+execute if entity @s[scores={rift_power=4}] run bossbar set rift:killer_bunny value 80
 execute if entity @s[scores={rift_power=4..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_zombie_villager"],NoGravity:1b,Invisible:1,Invulnerable:1}
 execute if entity @s[scores={rift_power=4..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_spider"],NoGravity:1b,Invisible:1,Invulnerable:1}
 
@@ -29,7 +31,9 @@ execute if entity @s[scores={rift_power=8..}] run summon armor_stand ~ ~1 ~ {Tag
 execute if entity @s[scores={rift_power=8..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_cave_spider"],NoGravity:1b,Invisible:1,Invulnerable:1}
 
 execute if entity @s[scores={rift_power=9}] run tellraw @a[distance=..64] ["",{"text":"A Witch Boss has forced its way through the rift!","color":"dark_red"}]
-execute if entity @s[scores={rift_power=9}] run summon witch ~ ~1 ~ {Tags:["nexus_mob_spawn","nexus_mob","nexus_witch","nexus_custom"],Attributes:[{Name:generic.maxHealth,Base:100},{Name:generic.movementSpeed,Base:0.35},{Name:generic.followRange,Base:64}],Health:100.0f,Glowing:1b,Team:"attackers",DeathLootTable:"rift:boss_witch"}
+execute if entity @s[scores={rift_power=9}] run summon witch ~ ~1 ~ {Tags:["nexus_mob_spawn","nexus_mob","nexus_witch","nexus_custom","nexus_witch_boss"],Attributes:[{Name:generic.maxHealth,Base:100},{Name:generic.movementSpeed,Base:0.35},{Name:generic.followRange,Base:64}],Health:100.0f,Glowing:1b,Team:"attackers",DeathLootTable:"rift:boss_witch"}
+execute if entity @s[scores={rift_power=9}] run bossbar set rift:witch players @a[distance=..96]
+execute if entity @s[scores={rift_power=9}] run bossbar set rift:witch value 100
 execute if entity @s[scores={rift_power=9..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_zombie_villager"],NoGravity:1b,Invisible:1,Invulnerable:1}
 execute if entity @s[scores={rift_power=9..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_creeper"],NoGravity:1b,Invisible:1,Invulnerable:1}
 
@@ -46,7 +50,9 @@ execute if entity @s[scores={rift_power=13..}] run summon armor_stand ~ ~1 ~ {Ta
 execute if entity @s[scores={rift_power=13..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_silverfish"],NoGravity:1b,Invisible:1,Invulnerable:1}
 
 execute if entity @s[scores={rift_power=14}] run tellraw @a[distance=..64] ["",{"text":"An Illusioner Boss has forced its way through the rift!","color":"dark_red"}]
-execute if entity @s[scores={rift_power=14}] run summon illusion_illager ~ ~1 ~ {Tags:["nexus_mob_spawn","nexus_mob"],HandItems:[{id:"minecraft:bow",Count:1b,tag:{ench:[{id:48,lvl:3},{id:49,lvl:1}]}},{}],HandDropChances:[0.0F,0.085F],Attributes:[{Name:generic.maxHealth,Base:100},{Name:generic.movementSpeed,Base:0.2},{Name:generic.followRange,Base:64},{Name:generic.knockbackResistance,Base:1}],Health:100.0f,Glowing:1b,Team:"attackers",DeathLootTable:"rift:boss_illusioner"}
+execute if entity @s[scores={rift_power=14}] run summon illusion_illager ~ ~1 ~ {Tags:["nexus_mob_spawn","nexus_mob","nexus_illusioner_boss"],HandItems:[{id:"minecraft:bow",Count:1b,tag:{ench:[{id:48,lvl:3},{id:49,lvl:1}]}},{}],HandDropChances:[0.0F,0.085F],Attributes:[{Name:generic.maxHealth,Base:100},{Name:generic.movementSpeed,Base:0.2},{Name:generic.followRange,Base:64},{Name:generic.knockbackResistance,Base:1}],Health:100.0f,Glowing:1b,Team:"attackers",DeathLootTable:"rift:boss_illusioner"}
+execute if entity @s[scores={rift_power=14}] run bossbar set rift:illusioner players @a[distance=..96]
+execute if entity @s[scores={rift_power=14}] run bossbar set rift:illusioner value 100
 execute if entity @s[scores={rift_power=14..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_husk"],NoGravity:1b,Invisible:1,Invulnerable:1}
 execute if entity @s[scores={rift_power=14..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_slime"],NoGravity:1b,Invisible:1,Invulnerable:1}
 
@@ -63,7 +69,9 @@ execute if entity @s[scores={rift_power=18..}] run summon armor_stand ~ ~1 ~ {Ta
 execute if entity @s[scores={rift_power=18..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_endermite"],NoGravity:1b,Invisible:1,Invulnerable:1}
 
 execute if entity @s[scores={rift_power=19}] run tellraw @a[distance=..64] ["",{"text":"A Magma Boss has forced its way through the rift!","color":"dark_red"}]
-execute if entity @s[scores={rift_power=19}] run summon magma_cube ~ ~1 ~ {Tags:["nexus_mob_spawn","nexus_mob"],Size:7,Attributes:[{Name:generic.maxHealth,Base:100},{Name:generic.movementSpeed,Base:0.3},{Name:generic.followRange,Base:64}],Health:100.0f,Glowing:1b,Team:"attackers",DeathLootTable:"rift:boss_magma",ActiveEffects:[{Id:8,Amplifier:5,Duration:20000,ShowParticles:0b}]}
+execute if entity @s[scores={rift_power=19}] run summon magma_cube ~ ~1 ~ {Tags:["nexus_mob_spawn","nexus_mob","nexus_magma_boss"],Size:7,Attributes:[{Name:generic.maxHealth,Base:150},{Name:generic.movementSpeed,Base:0.3},{Name:generic.followRange,Base:64}],Health:150.0f,Glowing:1b,Team:"attackers",DeathLootTable:"rift:boss_magma",ActiveEffects:[{Id:8,Amplifier:5,Duration:20000,ShowParticles:0b}]}
+execute if entity @s[scores={rift_power=19}] run bossbar set rift:magma players @a[distance=..96]
+execute if entity @s[scores={rift_power=19}] run bossbar set rift:magma value 150
 execute if entity @s[scores={rift_power=19..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_zombie_villager"],NoGravity:1b,Invisible:1,Invulnerable:1}
 execute if entity @s[scores={rift_power=19..}] run summon armor_stand ~ ~1 ~ {Tags:["nexus_mob_group","nexus_mob_spawn","nexus_group_evoker"],NoGravity:1b,Invisible:1,Invulnerable:1}
 

@@ -46,3 +46,20 @@ execute if score temp_0 rift_data = con_0 rift_data if entity @s[scores={rift_ti
 
 # Custom Mobs
 execute as @e[tag=nexus_custom] at @s run function rift:mobs/custom_mob
+
+#Boss Bars
+execute if entity @s[scores={rift_power=4..5}] store result bossbar rift:killer_bunny value run data get entity @e[tag=nexus_bunny_boss,limit=1] Health
+execute if entity @s[scores={rift_power=4..5}] store result score health_0 rift_data run bossbar get rift:killer_bunny value
+execute if entity @s[scores={rift_power=4..5}] if score health_0 rift_data matches 0 run bossbar set rift:killer_bunny players @p[tag=nexus_impossible]
+
+execute if entity @s[scores={rift_power=9}] store result bossbar rift:witch value run data get entity @e[tag=nexus_witch_boss,limit=1] Health
+execute if entity @s[scores={rift_power=9..10}] store result score health_0 rift_data run bossbar get rift:witch value
+execute if entity @s[scores={rift_power=9..10}] if score health_0 rift_data matches 0 run bossbar set rift:witch players @p[tag=nexus_impossible]
+
+execute if entity @s[scores={rift_power=14}] store result bossbar rift:illusioner value run data get entity @e[tag=nexus_illusioner_boss,limit=1] Health
+execute if entity @s[scores={rift_power=14..15}] store result score health_0 rift_data run bossbar get rift:illusioner value
+execute if entity @s[scores={rift_power=14..15}] if score health_0 rift_data matches 0 run bossbar set rift:illusioner players @p[tag=nexus_impossible]
+
+execute if entity @s[scores={rift_power=19}] store result bossbar rift:magma value run data get entity @e[tag=nexus_magma_boss,limit=1] Health
+execute if entity @s[scores={rift_power=19..20}] store result score health_0 rift_data run bossbar get rift:magma value
+execute if entity @s[scores={rift_power=19..20}] if score health_0 rift_data matches 0 run bossbar set rift:magma players @p[tag=nexus_impossible]
