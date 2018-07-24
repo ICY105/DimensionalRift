@@ -16,26 +16,27 @@ scoreboard players set con_350 rift_data 350
 scoreboard players set con_400 rift_data 400
 
 team add nexus
-team option nexus color light_purple
+team modify nexus color light_purple
 
 team add attackers
-team option attackers color red
+team modify attackers color red
 
 team add builders
-team option builders color red
-team option builders collisionRule never
+team modify builders color red
+team modify builders collisionRule never
 
-bossbar create rift:killer_bunny "Killer Bunny Boss"
+bossbar add rift:killer_bunny "Killer Bunny Boss"
 bossbar set rift:killer_bunny color green
 bossbar set rift:killer_bunny max 80
 
-bossbar create rift:witch "Witch Boss"
+bossbar add rift:witch "Witch Boss"
 bossbar set rift:witch color purple
 
-bossbar create rift:illusioner "Illusioner Boss"
+bossbar add rift:illusioner "Illusioner Boss"
 bossbar set rift:illusioner color blue
 
-bossbar create rift:magma "Magma Boss"
+bossbar add rift:magma "Magma Boss"
 bossbar set rift:magma color red
 
-tellraw @p ["",{"text":"Thank you for installing Dimensional Rift by ImCoolYeah105.","color":"dark_aqua"},{"text":"\nCommand Successfully installed.","color":"dark_green"}]
+tellraw @a[tag=!rift_install] ["",{"text":"Thank you for installing Dimensional Rift by ImCoolYeah105.","color":"dark_aqua"},{"text":"\nCommand Successfully installed.","color":"dark_green"}]
+tag @a add rift_install

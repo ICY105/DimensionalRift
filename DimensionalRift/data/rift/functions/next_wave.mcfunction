@@ -1,4 +1,4 @@
-summon item ~ ~1 ~1 {Tags:["rift_reward"],Team:"nexus",CustomName:"{\"text\":\"Unstable Matter\",\"color\":\"dark_purple\",\"italic\":false}",CustomNameVisible:1,NoGravity:1b,Item:{id:diamond,Count:1b,tag:{ench:[{lvl:1,id:71}],display:{Name:"{\"text\":\"Unstable Matter\",\"color\":\"dark_purple\",\"italic\":false}",Lore:["§3Generated from rifts."]}}}}
+summon item ~ ~1 ~1 {Tags:["rift_reward"],Team:"nexus",CustomName:"{\"text\":\"Unstable Matter\",\"color\":\"dark_purple\",\"italic\":false}",CustomNameVisible:1,NoGravity:1b,Item:{id:diamond,Count:1b,tag:{Enchantments:[{lvl:1,id:"minecraft:vanishing_curse"}],display:{Name:"{\"text\":\"Unstable Matter\",\"color\":\"dark_purple\",\"italic\":false}",Lore:["§3Generated from rifts."]}}}}
 
 scoreboard players operation temp_0 rift_data = @s rift_power
 scoreboard players add temp_0 rift_data 5
