@@ -1,0 +1,15 @@
+{
+	"display": {
+		"title": "§2Killer Bunny Boss",
+		"description": "§3Successfully pass wave 5, defeating the Killer Bunny Boss.",
+		"icon": {
+            "item": "minecraft:rabbit_foot"
+        }
+    },
+    "criteria": {
+        "pass_wave_10": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+	"parent": "rift:rift"
+}

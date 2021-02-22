@@ -1,0 +1,15 @@
+{
+	"display": {
+		"title": "Witch Boss",
+		"description": "§3Successfully pass wave 10, defeating the Witch Boss.",
+		"icon": {
+            "item": "minecraft:potion"
+        }
+    },
+    "criteria": {
+        "pass_wave_10": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+	"parent": "rift:wave_5"
+}

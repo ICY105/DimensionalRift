@@ -1,0 +1,16 @@
+{
+	"display": {
+		"title": "§4Wither Boss",
+		"description": "§3Successfully pass wave 25, defeating the final Wither Boss.",
+		"icon": {
+            "item": "minecraft:wither_skeleton_skull"
+        },
+		"frame": "challenge"
+    },
+    "criteria": {
+        "pass_wave_20": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+	"parent": "rift:wave_20"
+}

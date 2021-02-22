@@ -1,0 +1,15 @@
+{
+	"display": {
+		"title": "§9Illusioner Boss",
+		"description": "§3Successfully pass wave 15, defeating the Illusioner Boss.",
+		"icon": {
+            "item": "minecraft:bow"
+        }
+    },
+    "criteria": {
+        "pass_wave_15": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+	"parent": "rift:wave_10"
+}

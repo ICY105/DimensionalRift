@@ -1,0 +1,16 @@
+{
+	"display": {
+		"title": "§5Dimensional Rift",
+		"description": "§3Throw a nether star on a beacon to spawn a rift.",
+		"icon": {
+            "item": "minecraft:nether_star"
+        },
+        "background": "minecraft:textures/blocks/portal.png",
+		"frame": "goal"
+    },
+    "criteria": {
+        "nether_star_on_beacon": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}
