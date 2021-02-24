@@ -1,0 +1,28 @@
+{
+  "pools": [
+	{
+	  "rolls": 1,
+	  "entries": [
+		{
+		  "type": "item",
+		  "name": "minecraft:diamond",
+		  "weight": 1,
+		  "functions": [
+			{
+			  "function": "minecraft:set_name",
+			  "name": {"text":"Dimensional Flux","italic":false,"color":"dark_purple"}
+			},
+			{
+			  "function": "minecraft:set_lore",
+			  "lore": [{"text":"Generated from rifts.","italic":false,"color":"gray"}]
+			},
+			{
+			  "function": "minecraft:set_nbt",
+			  "tag": "{rift_flux:1b}"
+			}
+		  ]
+		}
+	  ]
+	}
+  ]
+}

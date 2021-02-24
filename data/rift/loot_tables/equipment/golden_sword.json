@@ -1,0 +1,32 @@
+{
+  "pools": [
+	{
+	  "rolls": 1,
+	  "entries": [
+		{
+		  "type": "item",
+		  "name": "minecraft:golden_sword",
+		  "weight": 1,
+		  "functions": [
+			{
+			  "function":"set_attributes",
+			  "modifiers": [
+				{
+				  "name":"generic.attack_damage",
+				  "attribute":"generic.attack_damage",
+				  "operation":"multiply_base",
+				  "amount":2.0,
+				  "slot":"mainhand"
+				}
+			  ]
+			},
+			{
+			  "function":"set_nbt",
+			  "tag":"{unbreakable:1b}"
+			}
+		  ]
+		}
+	  ]
+	}
+  ]
+}

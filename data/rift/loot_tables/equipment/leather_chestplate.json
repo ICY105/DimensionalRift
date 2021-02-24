@@ -1,0 +1,32 @@
+{
+  "pools": [
+	{
+	  "rolls": 1,
+	  "entries": [
+		{
+		  "type": "item",
+		  "name": "minecraft:leather_chestplate",
+		  "weight": 1,
+		  "functions": [
+			{
+			  "function":"set_attributes",
+			  "modifiers": [
+				{
+				  "name":"generic.max_health",
+				  "attribute":"generic.max_health",
+				  "operation":"multiply_base",
+				  "amount":0.5,
+				  "slot":"chest"
+				}
+			  ]
+			},
+			{
+			  "function":"set_nbt",
+			  "tag":"{unbreakable:1b}"
+			}
+		  ]
+		}
+	  ]
+	}
+  ]
+}
