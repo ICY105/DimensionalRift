@@ -14,8 +14,8 @@ execute if score $mobs.temp_0 rift.data matches 0 if score $mobs.temp_1 rift.dat
 execute if score $mobs.temp_0 rift.data matches 0 if score $mobs.temp_1 rift.data > $nexus.in_0 rift.data if entity @s[tag=rift.build_near] positioned ~ ~-16 ~ if entity @e[tag=rift.nexus,distance=16..32] run scoreboard players set $mobs.temp_0 rift.data 6
 scoreboard players add $mobs.temp_1 rift.data 16
 
-execute if score $mobs.temp_1 rift.data < $nexus.in_0 rift.data positioned ~-2 ~2 ~-2 if entity @e[tag=rift.nexus,dx=3,dz=3,dy=16] run scoreboard players set $mobs.temp_0 rift.data 7
-execute if score $mobs.temp_1 rift.data > $nexus.in_0 rift.data positioned ~-2 ~-2 ~-2 if entity @e[tag=rift.nexus,dx=3,dz=3,dy=-16] run scoreboard players set $mobs.temp_0 rift.data 8
+execute if score $mobs.temp_1 rift.data < $nexus.in_0 rift.data positioned ~-2 ~2 ~-2 if entity @e[tag=rift.nexus,dx=3,dz=3,dy=60] run scoreboard players set $mobs.temp_0 rift.data 7
+execute if score $mobs.temp_1 rift.data > $nexus.in_0 rift.data positioned ~-2 ~-2 ~-2 if entity @e[tag=rift.nexus,dx=3,dz=3,dy=-60] run scoreboard players set $mobs.temp_0 rift.data 8
 
 execute if block ~ ~-0.25 ~ #rift:no_hitbox run scoreboard players set $mobs.temp_0 rift.data 0
 
