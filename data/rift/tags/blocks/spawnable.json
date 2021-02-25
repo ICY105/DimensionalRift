@@ -50,6 +50,12 @@
 		"minecraft:tripwire",
 		"minecraft:repeater",
 		"minecraft:comparator",
-		"minecraft:redstone_wire"
+		"minecraft:redstone_wire",
+		"minecraft:wheat",
+		"minecraft:melon_stem",
+		"minecraft:pumpkin_stem",
+		"minecraft:beetroots",
+		"minecraft:carrots",
+		"minecraft:potatoes"
 	]
 }

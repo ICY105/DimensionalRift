@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "example": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "item": "minecraft:fermented_spider_eye",
+		  "nbt":"{rift_weakness:1b}"
+        }
+      }
+    }
+  },
+  "rewards":{ 
+    "function":"rift:nexus/trades/weakness"
+  },
+  "parent": "rift:rift"
+}

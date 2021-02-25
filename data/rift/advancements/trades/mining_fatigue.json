@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "example": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "item": "minecraft:wooden_pickaxe",
+		  "nbt":"{rift_mining_fatigue:1b}"
+        }
+      }
+    }
+  },
+  "rewards":{ 
+    "function":"rift:nexus/trades/mining_fatigue"
+  },
+  "parent": "rift:rift"
+}

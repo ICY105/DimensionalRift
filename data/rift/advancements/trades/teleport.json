@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "example": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "item": "minecraft:ender_pearl",
+		  "nbt":"{rift_teleport:1b}"
+        }
+      }
+    }
+  },
+  "rewards":{ 
+    "function":"rift:nexus/trades/teleport"
+  },
+  "parent": "rift:rift"
+}

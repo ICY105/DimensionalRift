@@ -5,7 +5,7 @@
 	  "entries": [
 		{
 		  "type": "item",
-		  "name": "minecraft:golden_sword",
+		  "name": "minecraft:golden_axe",
 		  "weight": 1,
 		  "functions": [
 			{
@@ -22,7 +22,7 @@
 			},
 			{
 			  "function":"set_nbt",
-			  "tag":"{unbreakable:1b}"
+			  "tag":"{unbreakable:1b,rift_break_power:5}"
 			}
 		  ]
 		}

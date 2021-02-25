@@ -6,6 +6,7 @@ execute positioned ^ ^1 ^1 as @e[type=item,distance=..1,limit=1,nbt={Age:0s}] ru
 #effects
 playsound minecraft:block.portal.trigger voice @a[distance=..96] ~ ~ ~ 1 1 1
 particle minecraft:portal ~ ~1 ~ 0.2 0.2 0.2 1 1000
+execute if entity @s[tag=rift.regen] run effect give @s minecraft:regeneration 8 4 true
 
 #advancement
 execute if score $nexus.wave rift.data matches 5 run advancement grant @a[distance=..96] only rift:wave_5

@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "example": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "item": "minecraft:glowstone",
+		  "nbt":"{rift_glowing:1b}"
+        }
+      }
+    }
+  },
+  "rewards":{ 
+    "function":"rift:nexus/trades/glowing"
+  },
+  "parent": "rift:rift"
+}

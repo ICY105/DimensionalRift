@@ -1,0 +1,15 @@
+{
+	"values":[
+		"#minecraft:anvil",
+		"minecraft:obsidian",
+		"minecraft:crying_obsidian",
+		"minecraft:enchanting_table",
+		"minecraft:respawn_anchor",
+		"minecraft:iron_block",
+		"minecraft:gold_block",
+		"minecraft:diamond_block",
+		"minecraft:emerald_block",
+		"minecraft:netherite_block",
+		"minecraft:beacon"
+	]
+}

@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "example": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "item": {
+          "item": "minecraft:iron_block",
+		  "nbt":"{rift_resistance:1b}"
+        }
+      }
+    }
+  },
+  "rewards":{ 
+    "function":"rift:nexus/trades/resistance"
+  },
+  "parent": "rift:rift"
+}
