@@ -2,7 +2,7 @@
 execute unless block ^ ^-0.5 ^1 minecraft:lava unless block ~ ~ ~ minecraft:lava run tag @s remove rift.cooling
 
 scoreboard players add @s rift.data 1
-execute if score @s rift.data matches 1 run replaceitem entity @s weapon.offhand minecraft:water_bucket
+execute if score @s rift.data matches 1 run item replace entity @s weapon.offhand with minecraft:water_bucket
 
 scoreboard players set $mobs.temp_0 rift.data 0
 execute if score @s rift.data matches 20.. if block ^ ^-0.5 ^1 minecraft:lava run scoreboard players set $mobs.temp_0 rift.data 1

@@ -11,7 +11,7 @@
 		"#minecraft:buttons",
 		"#minecraft:doors",
 		"#minecraft:rails",
-		"#minecraft:slabs",
+		"#minecraft:candles",
 		
 		"minecraft:grass",
 		"minecraft:fern",
@@ -56,6 +56,12 @@
 		"minecraft:pumpkin_stem",
 		"minecraft:beetroots",
 		"minecraft:carrots",
-		"minecraft:potatoes"
+		"minecraft:potatoes",
+		"minecraft:big_dripleaf",
+		"minecraft:small_dripleaf",
+		"minecraft:small_amethyst_bud",
+		"minecraft:medium_amethyst_bud",
+		"minecraft:large_amethyst_bud",
+		"minecraft:amethyst_cluster"
 	]
 }

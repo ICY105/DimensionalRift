@@ -5,9 +5,9 @@ summon minecraft:zombie_villager ~1 ~1 ~-1 {Tags:["global.ignore.kill","rift.new
 
 scoreboard players set @e[tag=rift.new] rift.data -100
 
-loot replace entity @e[tag=rift.new,tag=rift.tool,tag=!rift.commander,distance=..3] weapon.mainhand loot rift:equipment/wooden_pickaxe
-loot replace entity @e[tag=rift.new,tag=rift.tool,tag=rift.commander,distance=..3] weapon.mainhand loot rift:equipment/stone_pickaxe
+loot replace entity @e[tag=rift.new,tag=rift.tool,tag=!rift.commander,distance=..3] weapon.mainhand loot rift:equipment/pickaxe/wooden_pickaxe
+loot replace entity @e[tag=rift.new,tag=rift.tool,tag=rift.commander,distance=..3] weapon.mainhand loot rift:equipment/pickaxe/stone_pickaxe
 
-loot replace entity @e[tag=rift.new,tag=rift.armor,distance=..3] armor.chest loot rift:equipment/leather_chestplate
+loot replace entity @e[tag=rift.new,tag=rift.armor,distance=..3] armor.chest loot rift:equipment/armor/leather_chestplate
 tag @e[tag=rift.new,distance=..3] remove rift.new
 

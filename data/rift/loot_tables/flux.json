@@ -18,7 +18,7 @@
 			},
 			{
 			  "function": "minecraft:set_nbt",
-			  "tag": "{rift_flux:1b}"
+			  "tag": "{rift_flux:1b,HideFlags:1,Enchantments:[{id:\"minecraft:vanishing_curse\",lvl:1}]}"
 			}
 		  ]
 		}

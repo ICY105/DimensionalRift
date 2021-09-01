@@ -1,4 +1,6 @@
 
+schedule function rift:tick 1t
+
 #timers
 scoreboard players add $timer.5 rift.data 1
 execute if score $timer.5 rift.data matches 5.. run scoreboard players set $timer.5 rift.data 0

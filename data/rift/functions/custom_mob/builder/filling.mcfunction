@@ -2,7 +2,7 @@
 execute unless block ^ ^-0.5 ^1 minecraft:water unless block ~ ~ ~ minecraft:water run tag @s remove rift.filling
 
 scoreboard players add @s rift.data 1
-execute if score @s rift.data matches 1 run replaceitem entity @s weapon.offhand minecraft:oak_planks
+execute if score @s rift.data matches 1 run item replace entity @s weapon.offhand with minecraft:oak_planks
 
 scoreboard players set $mobs.temp_0 rift.data 0
 execute if score @s rift.data matches 30.. if block ^ ^-0.5 ^1 minecraft:water run scoreboard players set $mobs.temp_0 rift.data 1

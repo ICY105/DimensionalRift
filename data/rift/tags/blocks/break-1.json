@@ -1,0 +1,26 @@
+{
+	"values":[
+		"minecraft:wet_sponge",
+		"minecraft:sponge",
+		"minecraft:mycelium",
+		"minecraft:grass_block",
+		"minecraft:farmland",
+		"minecraft:composter",
+		"minecraft:clay",
+		"minecraft:beehive",
+		"#minecraft:rails",
+		"minecraft:calcite",
+		"#minecraft:wool",
+		"#rift:internal/sandstone",
+		"#rift:internal/quartz",
+		"minecraft:shroomlight",
+		"minecraft:pumpkin",
+		"#minecraft:signs",
+		"minecraft:nether_wart_block",
+		"#rift:internal/heads",
+		"minecraft:melon",
+		"minecraft:jack_o_lantern",
+		"#minecraft:banners",
+		"minecraft:bamboo"
+	]
+}

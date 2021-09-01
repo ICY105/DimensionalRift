@@ -12,7 +12,7 @@ execute if score $mobs.temp_0 rift.data matches 0 if score $mobs.temp_1 rift.dat
 scoreboard players remove $mobs.temp_1 rift.data 16
 execute if score $mobs.temp_0 rift.data matches 0 if score $mobs.temp_1 rift.data > $nexus.in_0 rift.data if entity @s[tag=rift.build_far] positioned ~ ~-16 ~ if entity @e[tag=rift.nexus,distance=32..48] run scoreboard players set $mobs.temp_0 rift.data 6
 execute if score $mobs.temp_0 rift.data matches 0 if score $mobs.temp_1 rift.data > $nexus.in_0 rift.data if entity @s[tag=rift.build_near] positioned ~ ~-16 ~ if entity @e[tag=rift.nexus,distance=16..32] run scoreboard players set $mobs.temp_0 rift.data 6
-scoreboard players add $mobs.temp_1 rift.data 16
+scoreboard players add $mobs.temp_1 rift.data 8
 
 execute if score $mobs.temp_1 rift.data < $nexus.in_0 rift.data positioned ~-2 ~2 ~-2 if entity @e[tag=rift.nexus,dx=3,dz=3,dy=60] run scoreboard players set $mobs.temp_0 rift.data 7
 execute if score $mobs.temp_1 rift.data > $nexus.in_0 rift.data positioned ~-2 ~-2 ~-2 if entity @e[tag=rift.nexus,dx=3,dz=3,dy=-60] run scoreboard players set $mobs.temp_0 rift.data 8
@@ -54,3 +54,5 @@ execute if score $mobs.temp_0 rift.data matches 8 run function rift:custom_mob/b
 
 execute if score $mobs.temp_0 rift.data matches 0 run data merge entity @s {NoAI:0b}
 execute if score $mobs.temp_0 rift.data matches 1.. run data merge entity @s {NoAI:1b}
+
+

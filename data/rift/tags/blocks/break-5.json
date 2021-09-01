@@ -1,0 +1,14 @@
+{
+	"values":[
+		"minecraft:bell",
+		"minecraft:spawner",
+		"minecraft:iron_bars",
+		"minecraft:enchanting_table",
+		"minecraft:chain",
+		"minecraft:redstone_block",
+		"minecraft:iron_block",
+		"minecraft:emerald_block",
+		"minecraft:diamond_block",
+		"#minecraft:anvil"
+	]
+}

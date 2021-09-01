@@ -1,0 +1,19 @@
+{
+	"values":[
+		"minecraft:lodestone",
+		"minecraft:lantern",
+		"minecraft:smoker",
+		"minecraft:blast_furnace",
+		"minecraft:stonecutter",
+		"minecraft:observer",
+		"minecraft:furnace",
+		"minecraft:dropper",
+		"minecraft:dispenser",
+		"minecraft:cobweb",
+		"minecraft:deepslate_redstone_ore",
+		"minecraft:deepslate_lapis_ore",
+		"minecraft:deepslate_iron_ore",
+		"minecraft:deepslate_gold_ore",
+		"minecraft:deepslate_diamond_ore"
+	]
+}

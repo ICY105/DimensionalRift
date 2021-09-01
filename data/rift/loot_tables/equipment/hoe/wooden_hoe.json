@@ -1,0 +1,32 @@
+{
+  "pools": [
+	{
+	  "rolls": 1,
+	  "entries": [
+		{
+		  "type": "item",
+		  "name": "minecraft:wooden_hoe",
+		  "weight": 1,
+		  "functions": [
+			{
+			  "function":"set_attributes",
+			  "modifiers": [
+				{
+				  "name":"generic.attack_damage",
+				  "attribute":"generic.attack_damage",
+				  "operation":"multiply_base",
+				  "amount":1.0,
+				  "slot":"mainhand"
+				}
+			  ]
+			},
+			{
+			  "function":"set_nbt",
+			  "tag":"{unbreakable:1b,rift_material:1,rift_break_power:2}"
+			}
+		  ]
+		}
+	  ]
+	}
+  ]
+}

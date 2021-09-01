@@ -4,12 +4,12 @@ scoreboard players set $mobs.out_0 rift.data 0
 #look up for a suitable spawning space
 scoreboard players set $mobs.temp_0 rift.data 254
 scoreboard players operation $mobs.temp_0 rift.data -= $mobs.in_0 rift.data
-execute if score $mobs.temp_0 rift.data matches 60.. run scoreboard players set $mobs.temp_0 rift.data 60
+execute if score $mobs.temp_0 rift.data matches 32.. run scoreboard players set $mobs.temp_0 rift.data 32
 execute if score $mobs.out_0 rift.data matches 0 run function rift:mobs/spawn_2_up
 
 #look down for a suitable spawning space
 scoreboard players operation $mobs.temp_0 rift.data = $mobs.in_0 rift.data
-execute if score $mobs.temp_0 rift.data matches 60.. run scoreboard players set $mobs.temp_0 rift.data 60
+execute if score $mobs.temp_0 rift.data matches 32.. run scoreboard players set $mobs.temp_0 rift.data 32
 execute if score $mobs.out_0 rift.data matches 0 run function rift:mobs/spawn_2_down
 
 #if not space is found, create one
