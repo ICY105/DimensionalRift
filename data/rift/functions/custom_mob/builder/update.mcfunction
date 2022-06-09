@@ -4,6 +4,8 @@ execute store result score $mobs.temp_1 rift.data run data get entity @s Pos[1]
 
 #get mode
 execute if block ^ ^-0.5 ^1 #rift:no_hitbox if block ^ ^-1.5 ^1 #rift:no_hitbox if block ^ ^-2.5 ^1 #rift:no_hitbox run scoreboard players set $mobs.temp_0 rift.data 1
+execute if block ^1 ^-0.5 ^1 #rift:no_hitbox if block ^1 ^-1.5 ^1 #rift:no_hitbox if block ^1 ^-2.5 ^1 #rift:no_hitbox run scoreboard players set $mobs.temp_0 rift.data 1
+execute if block ^-1 ^-0.5 ^1 #rift:no_hitbox if block ^-1 ^-1.5 ^1 #rift:no_hitbox if block ^-1 ^-2.5 ^1 #rift:no_hitbox run scoreboard players set $mobs.temp_0 rift.data 1
 execute unless block ^ ^1.5 ^1 #rift:no_hitbox run scoreboard players set $mobs.temp_0 rift.data 4
 
 scoreboard players add $mobs.temp_1 rift.data 8
